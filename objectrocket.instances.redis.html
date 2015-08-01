@@ -1,0 +1,251 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>objectrocket.instances.redis &mdash; ObjectRocket Python Client 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ObjectRocket Python Client 0.1.0 documentation" href="index.html"/>
+        <link rel="up" title="objectrocket.instances" href="objectrocket.instances.html"/>
+        <link rel="next" title="objectrocket.util" href="objectrocket.util.html"/>
+        <link rel="prev" title="objectrocket.instances.mongodb" href="objectrocket.instances.mongodb.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> ObjectRocket Python Client
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="API.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="objectrocket.auth.html">objectrocket.auth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objectrocket.bases.html">objectrocket.bases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objectrocket.client.html">objectrocket.client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objectrocket.constants.html">objectrocket.constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objectrocket.errors.html">objectrocket.errors</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="objectrocket.instances.html">objectrocket.instances</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="objectrocket.instances.mongodb.html">objectrocket.instances.mongodb</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">objectrocket.instances.redis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="objectrocket.util.html">objectrocket.util</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">changelog</a><ul class="simple">
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ObjectRocket Python Client</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="API.html">API Documentation</a> &raquo;</li>
+      
+          <li><a href="objectrocket.instances.html">objectrocket.instances</a> &raquo;</li>
+      
+    <li>objectrocket.instances.redis</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/objectrocket.instances.redis.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="module-objectrocket.instances.redis">
+<span id="objectrocket-instances-redis"></span><h1>objectrocket.instances.redis<a class="headerlink" href="#module-objectrocket.instances.redis" title="Permalink to this headline">¶</a></h1>
+<p>Redis instance classes and logic.</p>
+<dl class="class">
+<dt id="objectrocket.instances.redis.RedisInstance">
+<em class="property">class </em><code class="descclassname">objectrocket.instances.redis.</code><code class="descname">RedisInstance</code><span class="sig-paren">(</span><em>instance_document</em>, <em>instances</em><span class="sig-paren">)</span><a class="headerlink" href="#objectrocket.instances.redis.RedisInstance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="objectrocket.bases.html#objectrocket.bases.BaseInstance" title="objectrocket.bases.BaseInstance"><code class="xref py py-class docutils literal"><span class="pre">objectrocket.bases.BaseInstance</span></code></a></p>
+<p>An ObjectRocket Reids service instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>instance_document</strong> (<em>dict</em>) &#8211; A dictionary representing the instance object.</li>
+<li><strong>instances</strong> (<a class="reference internal" href="objectrocket.instances.html#objectrocket.instances.Instances" title="objectrocket.instances.Instances"><em>objectrocket.instances.Instances</em></a>) &#8211; An instance of
+<a class="reference internal" href="objectrocket.instances.html#objectrocket.instances.Instances" title="objectrocket.instances.Instances"><code class="xref py py-class docutils literal"><span class="pre">objectrocket.instances.Instances</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="objectrocket.instances.redis.RedisInstance.get_connection">
+<code class="descname">get_connection</code><span class="sig-paren">(</span><em>internal=False</em><span class="sig-paren">)</span><a class="headerlink" href="#objectrocket.instances.redis.RedisInstance.get_connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a live connection to this instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>internal</strong> (<em>bool</em>) &#8211; Whether or not to use a DC internal network connection.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">redis.client.StrictRedis</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="objectrocket.instances.redis.RedisInstance.internal_connect_string">
+<code class="descname">internal_connect_string</code><a class="headerlink" href="#objectrocket.instances.redis.RedisInstance.internal_connect_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DC internal network connection string.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="objectrocket.util.html" class="btn btn-neutral float-right" title="objectrocket.util" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="objectrocket.instances.mongodb.html" class="btn btn-neutral" title="objectrocket.instances.mongodb" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, ObjectRocket Engineering.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial &mdash; ObjectRocket Python Client 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ObjectRocket Python Client 0.1.0 documentation" href="index.html"/>
+        <link rel="next" title="API Documentation" href="API.html"/>
+        <link rel="prev" title="Installation" href="Installation.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> ObjectRocket Python Client
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="API.html">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="objectrocket.auth.html">objectrocket.auth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objectrocket.bases.html">objectrocket.bases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objectrocket.client.html">objectrocket.client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objectrocket.constants.html">objectrocket.constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objectrocket.errors.html">objectrocket.errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objectrocket.instances.html">objectrocket.instances</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="objectrocket.instances.mongodb.html">objectrocket.instances.mongodb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="objectrocket.instances.redis.html">objectrocket.instances.redis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="objectrocket.util.html">objectrocket.util</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">changelog</a><ul class="simple">
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ObjectRocket Python Client</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Tutorial</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Tutorial.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<p>And now for a super awesome tutorial. Provided that you&#8217;ve already performed an <a class="reference internal" href="Installation.html#installation-label"><span>Installation</span></a>, here is an example of how you might want to use the client:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">objectrocket</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">objectrocket</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">authenticate</span><span class="p">(</span><span class="s">&#39;&lt;username&gt;&#39;</span><span class="p">,</span> <span class="s">&#39;&lt;password&gt;&#39;</span><span class="p">)</span>
+
+<span class="go"># To create a new instance:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">instances</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;mongodb_sharded_0&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">zone</span><span class="o">=</span><span class="s">&#39;US-East-IAD3&#39;</span><span class="p">,</span> <span class="n">service_type</span><span class="o">=</span><span class="s">&#39;mongodb&#39;</span><span class="p">,</span> <span class="n">instance_type</span><span class="o">=</span><span class="s">&#39;mongodb_sharded&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s">&#39;3.0.5&#39;</span><span class="p">)</span>
+<span class="go">&lt;objectrocket.instances.MongodbInstance {...} at 0x10afeacd0&gt;</span>
+
+<span class="go"># To get all of your instances in a list:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">instances</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="go">[&lt;objectrocket.instances.MongodbInstance {...} at 0x1091f9990&gt;]</span>
+
+<span class="go"># To get one of your instances by name:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">inst</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">instances</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;mongodb_sharded_0&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">inst</span>
+<span class="go">&lt;objectrocket.instances.MongodbInstance {...} at 0x1097a8390&gt;</span>
+
+<span class="go"># To add a shard to your instance:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">inst</span><span class="o">.</span><span class="n">shards</span><span class="p">(</span><span class="n">add_shard</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="go">{&#39;data&#39;: [{&#39;name&#39;: &#39;7a0d6366f80f4a42995fabe01cbaea74&#39;, &#39;plan&#39;: 5, ...}, {...}]}</span>
+
+<span class="go"># To request compaction for your instance:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">inst</span><span class="o">.</span><span class="n">compaction</span><span class="p">(</span><span class="n">request_compaction</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="go">{&#39;data&#39;: {&#39;state&#39;: &#39;requested&#39;, &#39;updated&#39;: &#39;2015-01-01 00:00:00.000000&#39;}}</span>
+
+<span class="go"># To check the compaction state of your instance:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">inst</span><span class="o">.</span><span class="n">compaction</span><span class="p">()</span>
+<span class="go">{&#39;data&#39;: {&#39;state&#39;: &#39;requested&#39;, &#39;updated&#39;: &#39;2015-01-01 00:00:00.000000&#39;}}</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="API.html" class="btn btn-neutral float-right" title="API Documentation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Installation.html" class="btn btn-neutral" title="Installation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, ObjectRocket Engineering.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
